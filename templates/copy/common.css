@@ -1,0 +1,172 @@
+BODY {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 100%; TEXT-ALIGN: left; BORDER-RIGHT-WIDTH: 0px
+}
+#contain {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 10px; MARGIN: 10px auto; PADDING-TOP: 10px; POSITION: relative; HEIGHT: 100%; BORDER-RIGHT-WIDTH: 0px
+}
+#content {
+	MARGIN: 10px auto; POSITION: relative
+}
+#bottom {
+	MARGIN: 0px auto; POSITION: relative
+}
+#top {
+	Z-INDEX: 99; MARGIN: 0px auto; POSITION: relative
+}
+#bodyex {
+	LEFT: 0px; MARGIN: 0px; POSITION: absolute; TOP: 0px
+}
+.pdv_class {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; POSITION: absolute; BORDER-RIGHT-WIDTH: 0px
+}
+DIV {
+	FONT: 12px Verdana, Arial, Helvetica, sans-serif; COLOR: #505050; TEXT-DECORATION: none; line-height:200%;
+}
+LI {
+	FONT: 12px Verdana, Arial, Helvetica, sans-serif; COLOR: #505050; TEXT-DECORATION: none
+}
+TD {
+	FONT: 12px Verdana, Arial, Helvetica, sans-serif; COLOR: #505050; TEXT-DECORATION: none
+}
+P {
+	FONT: 12px Verdana, Arial, Helvetica, sans-serif; COLOR: #505050; TEXT-DECORATION: none; line-height:200%;
+}
+SELECT {
+	FONT: 12px Verdana, Arial, Helvetica, sans-serif; COLOR: #505050; TEXT-DECORATION: none
+}
+INPUT {
+	FONT: 12px Verdana, Arial, Helvetica, sans-serif; COLOR: #505050; TEXT-DECORATION: none
+}
+TEXTAREA {
+	FONT: 12px Verdana, Arial, Helvetica, sans-serif; COLOR: #505050; TEXT-DECORATION: none
+}
+A {
+	FONT: 13px Verdana, Arial, Helvetica, sans-serif; COLOR: #505050; TEXT-DECORATION: none
+}
+A.lk_bk:link {
+	COLOR: #000000;font-size:15px; TEXT-DECORATION: none}
+A.lk_bk:visited {
+	COLOR: #000000; font-size:15px;TEXT-DECORATION: none
+}
+A.lk_bk:active {
+	COLOR: #000000;font-size:15px; TEXT-DECORATION: none}
+A.lk_bk:hover {
+	COLOR: #0000CC; font-size:15px;TEXT-DECORATION: none}
+BUTTON {
+	FONT: 12px Verdana, Arial, Helvetica, sans-serif; COLOR: #505050; TEXT-DECORATION: none
+}
+INPUT {
+	FONT: 12px Verdana, Arial, Helvetica, sans-serif; COLOR: #505050; TEXT-DECORATION: none
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+A:link {
+	COLOR: #505050; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #505050; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #505050; TEXT-DECORATION: none
+}
+A.nomal:link {
+	COLOR: #505050; TEXT-DECORATION: underline
+}
+A.nomal:visited {
+	COLOR: #505050; TEXT-DECORATION: underline
+}
+A.nomal:active {
+	COLOR: #505050; TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.input {
+	BORDER-RIGHT: #ddd 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #ddd 1px solid; PADDING-LEFT: 3px; BACKGROUND: #f7f7f7; PADDING-BOTTOM: 0px; BORDER-LEFT: #ddd 1px solid; COLOR: #555; LINE-HEIGHT: 20px; PADDING-TOP: 0px; BORDER-BOTTOM: #ddd 1px solid; HEIGHT: 20px
+}
+.textarea {
+	BORDER-RIGHT: #ddd 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #ddd 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 12px; BACKGROUND: #f7f7f7; PADDING-BOTTOM: 3px; BORDER-LEFT: #ddd 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #ddd 1px solid
+}
+.button {
+	BORDER-RIGHT: #c0c0c0 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #c0c0c0 1px solid; PADDING-LEFT: 3px; BACKGROUND: #e8e8e8; PADDING-BOTTOM: 0px; BORDER-LEFT: #c0c0c0 1px solid; LINE-HEIGHT: 20px; PADDING-TOP: 0px; BORDER-BOTTOM: #c0c0c0 1px solid; HEIGHT: 22px
+}
+.submit {
+	BORDER-RIGHT: #c0c0c0 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #c0c0c0 1px solid; PADDING-LEFT: 3px; BACKGROUND: #e8e8e8; PADDING-BOTTOM: 0px; BORDER-LEFT: #c0c0c0 1px solid; LINE-HEIGHT: 20px; PADDING-TOP: 0px; BORDER-BOTTOM: #c0c0c0 1px solid; HEIGHT: 22px
+}
+.mustfill {
+	COLOR: #ff0000
+}
+SELECT {
+	FONT: 12px Verdana, Arial, Helvetica, sans-serif; COLOR: #505050
+}
+.msgdiv {
+	PADDING-LEFT: 53px; BACKGROUND: url(../images/chk_msg.gif) no-repeat 30px 50%; COLOR: #336699
+}
+.errdiv {
+	PADDING-LEFT: 53px; BACKGROUND: url(../images/chk_error.gif) no-repeat 30px 50%; COLOR: #ff0000
+}
+.rightdiv {
+	PADDING-LEFT: 53px; BACKGROUND: url(../images/chk_right.gif) no-repeat 30px 50%; COLOR: #505050
+}
+.noticediv {
+	BORDER-RIGHT: #fc5959 1px solid; BORDER-TOP: #fc5959 1px solid; DISPLAY: none; PADDING-LEFT: 33px; BACKGROUND: url(../images/chk_error.gif) #fffdf4 no-repeat 10px 50%; MARGIN: 3px 0px; BORDER-LEFT: #fc5959 1px solid; LINE-HEIGHT: 25px; BORDER-BOTTOM: #fc5959 1px solid
+}
+.okdiv {
+	BORDER-RIGHT: #fc5959 1px solid; BORDER-TOP: #fc5959 1px solid; DISPLAY: none; PADDING-LEFT: 33px; BACKGROUND: url(../images/chk_right.gif) #fffdf4 no-repeat 10px 50%; MARGIN: 3px 0px; BORDER-LEFT: #fc5959 1px solid; LINE-HEIGHT: 25px; BORDER-BOTTOM: #fc5959 1px solid
+}
+.securenotice {
+	COLOR: #ff0000; LINE-HEIGHT: 100px; TEXT-ALIGN: center
+}
+DIV#alert {
+	DISPLAY: none; CURSOR: default
+}
+DIV#alert .border {
+	BORDER-RIGHT: #97a0aa 1px solid; BORDER-TOP: #97a0aa 1px solid; BORDER-LEFT: #97a0aa 1px solid; BORDER-BOTTOM: #97a0aa 1px solid
+}
+DIV#alert .ntc {
+	PADDING-RIGHT: 30px; PADDING-LEFT: 30px; BACKGROUND: #fff; PADDING-BOTTOM: 30px; FONT: 14px/1.6 Verdana, Arial, Helvetica, sans-serif; PADDING-TOP: 30px; TEXT-ALIGN: left
+}
+DIV#alert .buttonzone {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BACKGROUND: #f7f7f7; PADDING-BOTTOM: 15px; PADDING-TOP: 15px; TEXT-ALIGN: center
+}
+DIV#alert .topBar {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; FONT-SIZE: 12px; BACKGROUND: #cbddef; PADDING-BOTTOM: 5px; LINE-HEIGHT: 20px; PADDING-TOP: 0px; HEIGHT: 20px; TEXT-ALIGN: left
+}
+DIV#alert .topBar .pwClose {
+	RIGHT: 8px; BACKGROUND: url(../images/pwin3.gif) no-repeat; WIDTH: 45px; CURSOR: pointer; POSITION: absolute; TOP: 0px; HEIGHT: 18px
+}
+DIV#alert .button {
+	BORDER-RIGHT: #97a0aa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #97a0aa 1px solid; PADDING-LEFT: 5px; BACKGROUND: #eee; PADDING-BOTTOM: 0px; BORDER-LEFT: #97a0aa 1px solid; LINE-HEIGHT: 20px; PADDING-TOP: 0px; BORDER-BOTTOM: #97a0aa 1px solid; HEIGHT: 22px
+}
+#frmWindow {
+	DISPLAY: none; CURSOR: default
+}
+#frmWindow .border {
+	BORDER-RIGHT: #97a0aa 1px solid; BORDER-TOP: #97a0aa 1px solid; BORDER-LEFT: #97a0aa 1px solid; BORDER-BOTTOM: #97a0aa 1px solid
+}
+#frmWindow .ntc {
+	PADDING-RIGHT: 30px; PADDING-LEFT: 30px; BACKGROUND: #fff; PADDING-BOTTOM: 30px; FONT: 12px/1.6 Verdana, Arial, Helvetica, sans-serif; PADDING-TOP: 30px; TEXT-ALIGN: left
+}
+#frmWindow .buttonzone {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BACKGROUND: #f7f7f7; PADDING-BOTTOM: 15px; PADDING-TOP: 10px; TEXT-ALIGN: center
+}
+#frmWindow .Frm {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 100%; HEIGHT: 500px; BORDER-RIGHT-WIDTH: 0px
+}
+#frmWindow .windowcontent {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: #fff; BORDER-BOTTOM-WIDTH: 0px; OVERFLOW: auto; WIDTH: 100%; HEIGHT: 380px; BORDER-RIGHT-WIDTH: 0px
+}
+#frmWindow .topBar {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 5px; FONT-SIZE: 12px; BACKGROUND: #cbddef; PADDING-BOTTOM: 5px; LINE-HEIGHT: 20px; PADDING-TOP: 0px; HEIGHT: 20px; TEXT-ALIGN: left
+}
+#frmWindow .topBar .pwClose {
+	RIGHT: 8px; BACKGROUND: url(../images/pwin3.gif) no-repeat; WIDTH: 45px; CURSOR: pointer; POSITION: absolute; TOP: 0px; HEIGHT: 18px
+}
+.bbb {
+	BORDER-RIGHT: #A71616 1px solid; BORDER-TOP: #A71616 0px solid; BORDER-LEFT: #A71616 1px solid; BORDER-BOTTOM: #A71616 1px solid
+}
+.zt{ FONT-SIZE: 14px; COLOR: #ffffff; FONT-FAMILY: ËÎÌו; TEXT-DECORATION: none; font-weight:bold;padding-left:20px;}
