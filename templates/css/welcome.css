@@ -112,6 +112,7 @@ COLOR: #505050;
 /*main*/
 .main{
 	margin:0 auto;
+	margin-top: 1px;
 	width:1005px;
 	overflow:hidden;
 	
