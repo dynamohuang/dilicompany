@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2015-02-16 10:57:36
+Date: 2015-02-16 17:11:17
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -105,11 +105,12 @@ CREATE TABLE `dili_cate_fields` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`,`model`),
   KEY `model` (`model`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dili_cate_fields
 -- ----------------------------
+INSERT INTO `dili_cate_fields` VALUES ('1', 'type_name', '分类名', '3', 'input', '50', '', '200', '20', 'required', '', '0', '1', '1', '1');
 
 -- ----------------------------
 -- Table structure for `dili_cate_models`
@@ -127,12 +128,13 @@ CREATE TABLE `dili_cate_models` (
   `thumb_preferences` text,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dili_cate_models
 -- ----------------------------
 INSERT INTO `dili_cate_models` VALUES ('1', 'common', '通用页面内容', '5', '1', '0', '0', '0', null);
+INSERT INTO `dili_cate_models` VALUES ('3', 'article_type', '文章分类', '20', '1', '0', '0', '0', null);
 
 -- ----------------------------
 -- Table structure for `dili_fieldtypes`
@@ -218,12 +220,12 @@ CREATE TABLE `dili_models` (
   `thumb_preferences` text,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dili_models
 -- ----------------------------
-INSERT INTO `dili_models` VALUES ('1', 'page_data', '页面片', '5', '0', '0', null);
+INSERT INTO `dili_models` VALUES ('3', 'page_data', '基本页面内容配置', '5', '0', '0', null);
 INSERT INTO `dili_models` VALUES ('2', 'article', '文章', '10', '1', '0', '{\"enabled\":[],\"default\":\"original\"}');
 
 -- ----------------------------
@@ -249,17 +251,18 @@ CREATE TABLE `dili_model_fields` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`,`model`),
   KEY `model` (`model`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dili_model_fields
 -- ----------------------------
-INSERT INTO `dili_model_fields` VALUES ('1', 'titie', '标题', '1', 'input', '0', '', '0', '0', '', '', '1', '1', '0', '1');
-INSERT INTO `dili_model_fields` VALUES ('2', 'content', '内容', '1', 'wysiwyg', '0', '', '0', '0', '', '', '1', '0', '0', '1');
+INSERT INTO `dili_model_fields` VALUES ('9', 'content', '内容', '3', 'wysiwyg', '0', '', '0', '0', '', '', '1', '0', '1', '1');
+INSERT INTO `dili_model_fields` VALUES ('8', 'title', '标题', '3', 'input', '0', '', '0', '0', 'required', '', '1', '1', '0', '1');
 INSERT INTO `dili_model_fields` VALUES ('3', 'title', '标题', '2', 'input', '0', '', '0', '0', 'required', '', '1', '1', '0', '1');
 INSERT INTO `dili_model_fields` VALUES ('4', 'article', '内容', '2', 'wysiwyg', '0', '', '0', '0', 'required', '', '1', '1', '9', '1');
 INSERT INTO `dili_model_fields` VALUES ('5', 'maker', '发布者', '2', 'input', '0', '', '0', '0', '', '', '1', '1', '0', '1');
-INSERT INTO `dili_model_fields` VALUES ('6', 'publish_time', '发布时间', '2', 'datetime', '0', '', '0', '0', '', '', '1', '1', '0', '1');
+INSERT INTO `dili_model_fields` VALUES ('7', 'type', '文章类别', '2', 'select_from_model', '0', 'article_type|type_name', '0', '0', 'required', '', '1', '1', '0', '1');
+INSERT INTO `dili_model_fields` VALUES ('10', 'key', 'key_name', '3', 'input', '0', '', '0', '0', 'required', '', '0', '1', '0', '1');
 
 -- ----------------------------
 -- Table structure for `dili_plugins`
@@ -390,7 +393,7 @@ CREATE TABLE `dili_sessions` (
 -- ----------------------------
 -- Records of dili_sessions
 -- ----------------------------
-INSERT INTO `dili_sessions` VALUES ('47864c3e3d8925ad1dcb5ffd086cd276', '::1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36', '1424055378', 'a:4:{s:9:\"user_data\";s:0:\"\";s:3:\"uid\";s:1:\"1\";s:10:\"model_type\";s:5:\"model\";s:5:\"model\";s:7:\"article\";}');
+INSERT INTO `dili_sessions` VALUES ('9279fa01d1c8babf7334a54ced3040c3', '::1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36', '1424077171', 'a:4:{s:9:\"user_data\";s:0:\"\";s:3:\"uid\";s:1:\"1\";s:10:\"model_type\";s:5:\"model\";s:5:\"model\";s:9:\"page_data\";}');
 
 -- ----------------------------
 -- Table structure for `dili_site_settings`
@@ -440,6 +443,26 @@ CREATE TABLE `dili_throttles` (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for `dili_u_c_article_type`
+-- ----------------------------
+DROP TABLE IF EXISTS `dili_u_c_article_type`;
+CREATE TABLE `dili_u_c_article_type` (
+  `classid` int(5) unsigned NOT NULL AUTO_INCREMENT,
+  `parentid` int(5) unsigned NOT NULL DEFAULT '0',
+  `level` int(2) unsigned NOT NULL DEFAULT '1',
+  `path` varchar(50) DEFAULT '',
+  `type_name` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`classid`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of dili_u_c_article_type
+-- ----------------------------
+INSERT INTO `dili_u_c_article_type` VALUES ('1', '0', '1', '{0}', '新闻中心');
+INSERT INTO `dili_u_c_article_type` VALUES ('2', '0', '1', '{0}', '产品中心');
+INSERT INTO `dili_u_c_article_type` VALUES ('3', '0', '1', '{0}', '经典案列');
+
+-- ----------------------------
 -- Table structure for `dili_u_c_common`
 -- ----------------------------
 DROP TABLE IF EXISTS `dili_u_c_common`;
@@ -468,13 +491,18 @@ CREATE TABLE `dili_u_m_article` (
   `title` varchar(100) NOT NULL DEFAULT '',
   `article` text NOT NULL,
   `maker` varchar(100) NOT NULL DEFAULT '',
-  `publish_time` varchar(100) NOT NULL DEFAULT '',
+  `type` int(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dili_u_m_article
 -- ----------------------------
+INSERT INTO `dili_u_m_article` VALUES ('1', '1424073882', '1424073882', '1', '1', '投资甲醇燃料的五大优势', 'haoahoaohaoah', '', '1');
+INSERT INTO `dili_u_m_article` VALUES ('2', '1424073907', '1424073907', '1', '1', '亚洲新能源大会召开', 'sdfdsfdsfasdgafgasgds', '', '1');
+INSERT INTO `dili_u_m_article` VALUES ('3', '1424073929', '1424073929', '1', '1', '热烈祝贺我司美股上市', 'dfdsfsafdsfdsf', '', '1');
+INSERT INTO `dili_u_m_article` VALUES ('4', '1424073950', '1424073950', '1', '1', '互联网营销的成功', 'dsfdsfsdfsdf', '', '1');
+INSERT INTO `dili_u_m_article` VALUES ('5', '1424073972', '1424073972', '1', '1', '2015年第一季度公司销售业绩', 'fdsafasdgbat', 'ddd', '1');
 
 -- ----------------------------
 -- Table structure for `dili_u_m_page_data`
@@ -486,14 +514,17 @@ CREATE TABLE `dili_u_m_page_data` (
   `update_time` int(10) unsigned NOT NULL DEFAULT '0',
   `create_user` tinyint(10) unsigned NOT NULL DEFAULT '0',
   `update_user` tinyint(10) unsigned NOT NULL DEFAULT '0',
-  `titie` varchar(100) NOT NULL DEFAULT '',
+  `title` varchar(100) NOT NULL DEFAULT '',
   `content` text NOT NULL,
+  `key` varchar(100) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dili_u_m_page_data
 -- ----------------------------
+INSERT INTO `dili_u_m_page_data` VALUES ('1', '1424076273', '1424077177', '1', '1', '公司简介', '<p style=\"font-size:14px;font-family:Verdana, Arial, Helvetica, sans-serif;color:#505050;\">\r\n	<span>&nbsp;<strong>重庆泓彬醇基有限公司 &nbsp;</strong>成立于2013年5月，<span>坐落于重庆市万盛区中心广场</span>，<span>主要从事节能环保事业，是集研发、生产和销售于一体的综合性企业。在能源日渐匮乏和大气污染日趋严重的今天，节能环保将是未来世界大主题，我们的目标：做中国的节能燃料领导者。</span></span> \r\n</p>\r\n<p style=\"font-size:14px;font-family:Verdana, Arial, Helvetica, sans-serif;color:#505050;\">\r\n	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公司主营产品：“甘氏节能”醇基节能燃料、节能灶具、节能控制器等。 公司研制开发的醇基节能燃料及灶具，适用于酒店、餐厅、家用、夜排档等。这种新型燃料燃烧充分，无烟无味，无残液残渣，火力猛，温度高，比液化气、柴油节省30%左右！燃料呈液态，在常压下灌装使用，消除了液化气罐的高压易爆炸的安全隐患，燃烧无烟无残留使得整个厨房环境更干净卫生。<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公司产品通过了国家标准，我们还建立了比国家标准更高、要求更严格的行业标准。另外，我们还取得了储存液态燃料的装置的专利证书、“甘氏节能”商标和危化品经营许可证。<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我司产品节能环保高效的优势得到众多客户的认可，现在成都地区我们已经拥有500多家餐馆、酒店、食堂的客户，月供燃料200余吨。公司还在福州、西昌、兰州、攀枝花、阿坝等地区有加盟商，规模正在不断扩大。</span> \r\n</p>\r\n<p style=\"font-size:14px;font-family:Verdana, Arial, Helvetica, sans-serif;color:#505050;\">\r\n	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公司强大的技术力量团队将为您提供及时、完善、周到的服务。我们承诺：将在接到您电话通知的24小时内送油上门。如果有任何问题，我们将在接到您通知后48小时内上门解决处理，特殊紧急情况须更快上门服务。售后服务专线：400-666-3729。<br />\r\n</span> \r\n</p>\r\n<p style=\"font-size:14px;font-family:Verdana, Arial, Helvetica, sans-serif;color:#505050;\">\r\n	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我们的宗旨：诚信，创新，利益双赢。</span> \r\n</p>', 'company_des');
+INSERT INTO `dili_u_m_page_data` VALUES ('2', '1424077372', '1424077372', '1', '1', '联系我们', '<strong>重庆泓彬醇基有限公司<br />\r\n</strong><span style=\"color:#505050;font-family:Verdana;font-size:14px;line-height:28px;\">联系人&nbsp;&nbsp; ：毛先生</span><br />\r\n<span style=\"color:#505050;font-family:Verdana;font-size:14px;line-height:28px;\">联系手机：13368088888</span><br />\r\n<span style=\"color:#505050;font-family:Verdana;font-size:14px;line-height:28px;\">服务热线：400-666-3729/023-66133292</span><br />\r\n<span style=\"color:#505050;font-family:Verdana;font-size:14px;line-height:28px;\">企业邮箱：</span><a href=\"mailto:ycjn2014@163.com\">ycjn2014@163.com</a><br />\r\n<span style=\"color:#505050;font-family:Verdana;font-size:14px;line-height:28px;\">公司地址：重庆市万盛区中心广场</span>', 'contact_us');
 
 -- ----------------------------
 -- Table structure for `dili_validations`
