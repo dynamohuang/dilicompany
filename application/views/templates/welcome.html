@@ -13,7 +13,7 @@
 
 <div class="head">
 <ul class="top-tip">
-	<li><a>设为首页{$mylove}</a></li>
+	<li><a>设为首页</a></li>
     <li>|</li>
     <li><a>加入收藏</a></li>
     <li>|</li>
@@ -70,12 +70,8 @@
 </div>
 <div class="content-p">
 <span style="LINE-HEIGHT: 200%; font-name: 宋体">       
-          <p><font face="Verdana">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
-<p><font face="Verdana">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<strong>重庆泓彬醇基有限公司</strong>成立于2013年5月，<font face="Verdana">坐落于重庆市万盛区中心广场</font>，<font face="Verdana">主要从事节能环保事业，是集研发、生产和销售于一体的综合性企业。在能源日渐匮乏和大气污染日趋严重的今天，节能环保将是未来世界大主题，我们的目标：做中国的节能燃料领导者。</font></font></p>
-<p><font face="Verdana"><font face="Verdana">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公司主营产品：“甘氏节能”醇基节能燃料、节能灶具、节能控制器等。 公司研制开发的醇基节能燃料及灶具，适用于酒店、餐厅、家用、夜排档等。这种新型燃料燃烧充分，无烟无味，无残液残渣，火力猛，温度高，比液化气、柴油节省30%左右！燃料呈液态，在常压下灌装使用，消除了液化气罐的高压易爆炸的安全隐患，燃烧无烟无残留使得整个厨房环境更干净卫生。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公司产品通过了国家标准，我们还建立了比国家标准更高、要求更严格的行业标准。另外，我们还取得了储存液态燃料的装置的专利证书、“甘氏节能”商标和危化品经营许可证。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我司产品节能环保高效的优势得到众多客户的认可，现在成都地区我们已经拥有500多家餐馆、酒店、食堂的客户，月供燃料200余吨。公司还在福州、西昌、兰州、攀枝花、阿坝等地区有加盟商，规模正在不断扩大。</font></font></p>
-<p><font face="Verdana"><font face="Verdana">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 公司强大的技术力量团队将为您提供及时、完善、周到的服务。我们承诺：将在接到您电话通知的24小时内送油上门。如果有任何问题，我们将在接到您通知后48小时内上门解决处理，特殊紧急情况须更快上门服务。售后服务专线：400-666-3729。<br></font></font></p>
-<p><font face="Verdana"><font face="Verdana">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我们的宗旨：诚信，创新，利益双赢。</font></font></p>
-                </span>
+{{$company_des->content}}                         
+</span>
 </div>
 
 
@@ -91,12 +87,10 @@
 </div>
 <div class="content-p">
 <ul>
-<li><p><a href="#">投资甲醇燃料的五大优势</a></p></li>
-<li><p><a href="#">亚洲新能源大会召开</a></p></li>
-<li><p><a href="#">热烈祝贺我司美股上市</a></p></li>
-<li><p><a href="#">互联网营销的成功</a></p></li>
-<li><p><a href="#">2015年第一季度公司销售业绩</a></p></li>
-</ui>
+{foreach $news as $new}
+<li><p><a href="#">{$new->title}</a></p></li>
+{/foreach}
+</ul>
 
 </div>
 </div>
@@ -108,8 +102,7 @@
 <a class="more"><img src="images/more.gif"></a>
 </div>
 <div class="content-p">
-<p><font face="Verdana"><strong>重庆泓彬醇基有限公司<br></strong>联系人&nbsp;&nbsp; ：毛先生<br>联系手机：13368088888<br>服务热线：400-666-3729/023-66133292<br>企业邮箱：<a href="mailto:ycjn2014@163.com">ycjn2014@163.com</a><br>公司地址：重庆市万盛区中心广场</font></p>
-
+{{$contact_us->content}}
 </div>
 </div>
 
