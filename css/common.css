@@ -2,7 +2,91 @@
 .main{
 	margin:0 auto;
 	width:1005px;
-	height:500px;
 	overflow:hidden;
-	border:1px dashed red;
+}
+.content-title{
+	background:#BA0A31;
+	height:25px;
+	width:100%;
+	margin:0px;
+	clear:both;
+	padding-top:12px;
+	padding-bottom:8px;
+}
+.content-p{
+	padding:5px;
+}
+.sub-title{
+	font-weight: bold;
+	font-size: 14px;
+    color: #ffffff;
+    margin-left:18px;
+}
+.more{
+	float:right;
+}
+.more img{
+	width:93px;
+	height:26px; 
+	border:0;
+}
+.main-left{
+	margin:0;
+	float:left;
+	border: 1.5px solid #BA0A31;
+	
+}
+.main-left .products{
+	width:262px;
+	
+	
+	
+}
+.products .left-product{
+	width:220px;
+	height: 40px;
+	margin:2px auto;
+	text-align:center;
+	background:#E9F3FC;
+	border: 1px solid #D7EAF9;
+	font-size: 15px;
+	TEXT-DECORATION: none;
+}
+.products .left-product a{
+	vertical-align:middle;
+	line-height:2.5em;
+	display:block;
+	color: #505050;
+}
+
+
+
+
+.main-left	.contact-us{
+	width:262px;
+	
+	
+	
+}
+.main-left	.about-us{
+	width:262px;
+	
+}
+
+.main-left	.about-us img{
+	width:240px;
+	
+}
+
+
+
+
+
+.main-right{
+	
+	margin:0;
+	width:735px;
+	min-height:500px;
+	float:right;
+	border: 1.5px solid #BA0A31;
 }

@@ -1,6 +1,43 @@
 {include file="head.html"}
 <link href="{$base_url}/css/common.css" rel="stylesheet" type="text/css">
 <div class="main">
+	<div class="main-left">
+		<div class="products">
+			<div class="content-title">
+				<a class="sub-title">产品系列</a>
+			</div>
+			<div class="content-p">
+			<div class="left-product" ><a href="#">醇基炉具</a></div>
+			<div class="left-product"><a href="#">醇基炉具</a></div>
+			<div class="left-product"><a href="#">醇基炉具</a></div>
+			<div class="left-product"><a href="#">醇基炉具</a></div>	
+			</div>
+		</div>
+		<div class="contact-us">
+			<div class="content-title">
+				<a class="sub-title">联系我们</a>
+			</div>
+			<div class="content-p">
+			{$contact_us->content}
+			</div>
+		</div>
+		<div class="about-us">
+			<div class="content-title">
+				<a class="sub-title">关于我们</a>
+			</div>
+			<div class="content-p">
+			<img src="http://www.baidu.com/img/bdlogo.png">
+			</div>
+		</div>
+	</div>
+	<div class="main-right">
+		<div class="content-title">
+				<a class="sub-title">{$main_data->title}</a>
+			</div>
+			<div class="content-p">
+			{$main_data->content}
+			</div>
+	</div>
 
 
 
