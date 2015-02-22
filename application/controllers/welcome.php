@@ -2,6 +2,16 @@
 
 class Welcome extends CI_Controller {
 	
+	private function view_common(){
+		//联系我们
+		$this->db->select('title,content');
+		$this->db->where('key','contact_us');
+		$query = $this->db->get("dili_u_m_page_data",1,0);
+		$contact_us = $query->result();
+		$this->smarty->assign('contact_us',$contact_us[0]);
+		$this->smarty->view('common.html');
+	}
+	
 	
 	public function __construct(){
 		parent::__construct();
@@ -40,25 +50,21 @@ class Welcome extends CI_Controller {
 		$intro = $query->result();
 		$this->smarty->assign('main_data',$intro[0]);
 		
-		//联系我们
-		$this->db->select('title,content');
-		$this->db->where('key','contact_us');
-		$query = $this->db->get("dili_u_m_page_data",1,0);
-		$contact_us = $query->result();
-		$this->smarty->assign('contact_us',$contact_us[0]);
-		$this->smarty->view('common.html');
+		$this->view_common();
 		
 	}
 	
-	public function product(){
-		echo "y";
+
+	public function news_detail(){
+		$id = $this->uri->segment(3);
+		//首页新闻中心标题列表
+		$this->db->select('title,content');
+		$query = $this->db->get("dili_u_m_article",1,0);
+		$news = $query->result();
+		$this->smarty->assign('new',$news[0]);
+		//$this->view_common();
 	}
-	public function news(){
-		
-	}
-	public function ourcase(){
-		
-	}
+
 	public function join(){
 		//main_data
 		$this->db->select('title,content');
@@ -67,13 +73,7 @@ class Welcome extends CI_Controller {
 		$join = $query->result();
 		$this->smarty->assign('main_data',$join[0]);
 		
-		//联系我们
-		$this->db->select('title,content');
-		$this->db->where('key','contact_us');
-		$query = $this->db->get("dili_u_m_page_data",1,0);
-		$contact_us = $query->result();
-		$this->smarty->assign('contact_us',$contact_us[0]);
-		$this->smarty->view('common.html');
+		$this->view_common();
 		
 	} 
 	public function contact(){
@@ -84,13 +84,7 @@ class Welcome extends CI_Controller {
 		$contact = $query->result();
 		$this->smarty->assign('main_data',$contact[0]);
 		
-		//联系我们
-		$this->db->select('title,content');
-		$this->db->where('key','contact_us');
-		$query = $this->db->get("dili_u_m_page_data",1,0);
-		$contact_us = $query->result();
-		$this->smarty->assign('contact_us',$contact_us[0]);
-		$this->smarty->view('common.html');
+		$this->view_common();
 		
 	}
 }
