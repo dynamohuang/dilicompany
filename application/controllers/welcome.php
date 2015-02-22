@@ -32,7 +32,7 @@ class Welcome extends CI_Controller {
 	}
 	public function intro(){
 		
-		
+		$this->smarty->view('common.html');
 		
 	}
 	

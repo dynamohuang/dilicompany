@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2015-02-16 17:11:17
+Date: 2015-02-22 14:16:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -35,7 +35,7 @@ CREATE TABLE `dili_admins` (
 -- ----------------------------
 -- Records of dili_admins
 -- ----------------------------
-INSERT INTO `dili_admins` VALUES ('1', 'dilicompany ', 'f3f1c17b6e88ad313df1e996f85ada43a5a3b987', 'f7f2acd52b', 'hello@dilicms.com', '1', '1');
+INSERT INTO `dili_admins` VALUES ('1', 'dilicompany ', '9f9f21c29d03adb1c62889c2595d35ddd260fb34', '04ca8e3332', 'hello@dilicms.com', '1', '1');
 
 -- ----------------------------
 -- Table structure for `dili_attachments`
@@ -393,7 +393,8 @@ CREATE TABLE `dili_sessions` (
 -- ----------------------------
 -- Records of dili_sessions
 -- ----------------------------
-INSERT INTO `dili_sessions` VALUES ('9279fa01d1c8babf7334a54ced3040c3', '::1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36', '1424077171', 'a:4:{s:9:\"user_data\";s:0:\"\";s:3:\"uid\";s:1:\"1\";s:10:\"model_type\";s:5:\"model\";s:5:\"model\";s:9:\"page_data\";}');
+INSERT INTO `dili_sessions` VALUES ('d61ed3e2e74aa88820f592930068821d', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36', '1424450675', '');
+INSERT INTO `dili_sessions` VALUES ('031b929e6a019769468734a2da826d77', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36', '1424585597', 'a:3:{s:9:\"user_data\";s:0:\"\";s:21:\"throttles_dilicompany\";i:1;s:3:\"uid\";s:1:\"1\";}');
 
 -- ----------------------------
 -- Table structure for `dili_site_settings`
@@ -436,7 +437,7 @@ CREATE TABLE `dili_throttles` (
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of dili_throttles

@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+.main{
+	margin:0 auto;
+	width:1005px;
+	height:500px;
+	overflow:hidden;
+	border:1px dashed red;
+}

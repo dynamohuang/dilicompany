@@ -1,116 +1,9 @@
-@charset "utf-8";
-/* CSS Document */
-body{
-	margin:0px;
-	padding:0px;
-}
-.clearfix:after {
-content: ".";
-display: block;
-height: 0;
-clear: both;
-visibility: hidden;
-zoom:1;
-}
-p{
-FONT: 14px Verdana, Arial, Helvetica, sans-serif;
-COLOR: #505050;
-TEXT-DECORATION: none;
-line-height: 200%;	
-}
-a{
-	text-decoration:none;	
-}
-a:hover{
-	text-decoration:underline;
-}
-
-
-/*top*/
-.top{
-	margin:0 auto;
-	width:1005px;
-}
-
-.head{
-	background:#F0F0F0;
-}
-
-.top ul{
-	
-	list-style:none;
-}
-
-.top ul li{
-	display:inline;
-	
-}
-.top-tip{
-	float:right;
-	margin-top:0px;
-}
-.top-tip li{
-	margin-right:5px;
-}
-.top-tip a{
-FONT: 13px Verdana, Arial, Helvetica, sans-serif;
-COLOR: #505050;
-}
-
-.top h1,h3{
-	display:inline;
-}
-.title{
-	
-	padding:30px;
-}
-.title h1{
-	margin 0 atuo;
-	color:#BA0A31;
-}
-.nav-bar{
-	background:#BA0A31;
-	height:30px;
-	margin-left:0px;
-	margin-bottom:0px;
-	margin-top:2px;
-	clear:both;
-	padding-top:15px;
-}
-
-.nav-bar li{
-	margin-right:48px;
-}
-
-.nav-bar li  a{
-	font-weight: bold;
-	font-size: 14px;
-    color: #ffffff;
-    font-famliy: 宋体;
-	
-}
- 
-
-
-.top-contact{
-	
-	margin-left:400px;
-	color:#BA0A31;	
-	
-}
-.top-add{
-	background:#CCC;
-	height:280px;
-	width:100%;
-}
 /*main*/
 .main{
 	margin:0 auto;
 	width:1005px;
 	overflow:hidden;
 }
-
-
 
 .main-left{
 	
@@ -217,21 +110,4 @@ overflow: hidden;
 top:160px;
 left:0px;
 
-}
-
-
-/*footer*/
-.footer{
-	margin:3px auto 0 auto;
-	background-image: url(../images/footer.jpg);
-	width:1005px;
-	height:150px;
-}
-
-.footer-contact  a{
-	FONT: 13px Verdana, Arial, Helvetica, sans-serif;
-	COLOR: #505050;
-}
-.footer-contact a:hover{
-	COLOR: #BA0A31;
 }
