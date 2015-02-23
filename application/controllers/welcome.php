@@ -29,9 +29,22 @@ class Welcome extends CI_Controller {
 			
 		//首页新闻中心标题列表
 		$this->db->select('id,title');
+		$this->db->where('type','1');
 		$query = $this->db->get("dili_u_m_article",5,0);
 		$news = $query->result();	
 		$this->smarty->assign('news',$news);
+		
+		//产品展示
+		$this->db->select('id,title,dili_attachments.*');
+		$this->db->where('dili_u_m_article.type','2');
+		$this->db->from('dili_u_m_article');
+		$this->db->join('dili_attachments','dili_attachments.content = dili_u_m_article.id');
+		$this->db->limit(5,0);
+		
+		$query = $this->db->get();
+		
+		$products = $query->result();
+		$this->smarty->assign('products',$products);
 		
 		//联系我们
 		$this->db->select('title,content');
@@ -77,6 +90,7 @@ class Welcome extends CI_Controller {
 
 	public function news_detail(){
 		$id = $this->uri->segment(3);
+		$from = $this->uri->segment(4);	 
 		//首页新闻中心标题列表
 		$this->db->select('title,article');
 		$this->db->where('id',$id);
@@ -84,7 +98,11 @@ class Welcome extends CI_Controller {
 		$news = $query->result();
         
 		$data =new stdClass();
-		$data->title = "新闻中心";
+		if ($from == "product"){
+			$data->title = "产品中心";
+		}else{
+			$data->title = "新闻中心";
+		}
 		$data->content = $news[0]->article;
 		$this->smarty->assign('main_data',$data);
 		$this->smarty->assign('common_type','data');

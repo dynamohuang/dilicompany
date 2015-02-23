@@ -62,41 +62,15 @@
 <a class="more"><img src="{$base_url}/images/more.gif"></a>
 </div>
 <div class="content-p">
+{foreach $products as $product}	
 <div class="photo-item">
 <div class="album-pic">
-<a href="#"><img src="{$base_url}/images/tmp/1.jpg">
-<b>产品A</b>
+<a href="{$site_url}/welcome/news_detail/{$product->id}/product"><img src="{$base_url}/attachments/{$product->folder}/{$product->name}.{$product->type}">
+<b>{$product->title}</b>
 </a>
 </div>
 </div>
-<div class="photo-item">
-<div class="album-pic">
-<a href="#"><img src="{$base_url}/images/tmp/2.jpg">
-<b>产品B</b>
-</a>
-</div>
-</div>
-<div class="photo-item">
-<div class="album-pic">
-<a href="#"><img src="{$base_url}/images/tmp/3.jpg">
-<b>产品C</b>
-</a>
-</div>
-</div>
-<div class="photo-item">
-<div class="album-pic">
-<a href="#"><img src="{$base_url}/images/tmp/4.jpg">
-<b>产品D</b>
-</a>
-</div>
-</div>
-<div class="photo-item">
-<div class="album-pic">
-<a href="#"><img src="{$base_url}/images/tmp/5.jpg">
-<b>产品E</b>
-</a>
-</div>
-</div>
+{/foreach}
 
 
 </div>
