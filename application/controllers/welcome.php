@@ -49,7 +49,27 @@ class Welcome extends CI_Controller {
 		$query = $this->db->get("dili_u_m_cate_content",1,0);
 		$intro = $query->result();
 		$this->smarty->assign('main_data',$intro[0]);
+		$this->smarty->assign('common_type','data');
+		$this->view_common();
 		
+	}
+	
+	public function news_list(){
+		
+		//新闻列表
+		$this->db->select('id,title,update_time');
+		$this->db->where('type','1');
+		$query = $this->db->get("dili_u_m_article",20,0);
+		$lists = $query->result();
+		foreach ($lists as $k=>$v){
+			
+			$lists[$k]->update_time = date('Y-m-d', $v->update_time);
+		}
+		$this->smarty->assign('lists',$lists);
+		
+		
+		$this->smarty->assign('title','新闻中心');
+		$this->smarty->assign('common_type','list');
 		$this->view_common();
 		
 	}
@@ -58,11 +78,17 @@ class Welcome extends CI_Controller {
 	public function news_detail(){
 		$id = $this->uri->segment(3);
 		//首页新闻中心标题列表
-		$this->db->select('title,content');
+		$this->db->select('title,article');
+		$this->db->where('id',$id);
 		$query = $this->db->get("dili_u_m_article",1,0);
 		$news = $query->result();
-		$this->smarty->assign('new',$news[0]);
-		//$this->view_common();
+        
+		$data =new stdClass();
+		$data->title = "新闻中心";
+		$data->content = $news[0]->article;
+		$this->smarty->assign('main_data',$data);
+		$this->smarty->assign('common_type','data');
+		$this->view_common();
 	}
 
 	public function join(){
@@ -72,7 +98,7 @@ class Welcome extends CI_Controller {
 		$query = $this->db->get("dili_u_m_cate_content",1,0);
 		$join = $query->result();
 		$this->smarty->assign('main_data',$join[0]);
-		
+		$this->smarty->assign('common_type','data');
 		$this->view_common();
 		
 	} 
@@ -83,7 +109,7 @@ class Welcome extends CI_Controller {
 		$query = $this->db->get("dili_u_m_cate_content",1,0);
 		$contact = $query->result();
 		$this->smarty->assign('main_data',$contact[0]);
-		
+		$this->smarty->assign('common_type','data');
 		$this->view_common();
 		
 	}

@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+.list li{
+	border-bottom:1.5px dotted #999999;
+	margin-top:10px;
+	COLOR: #505050;
+	font-family: Verdana;
+	
+	
+}
+.list li a{
+	COLOR: #505050;
+}
+.list .new_titile{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space : nowrap;
+	max-width:520px;
+	display:inline-block;
+}
+.list .make_date{
+	float:right;
+}

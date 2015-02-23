@@ -57,8 +57,9 @@
 	
 	
 }
+
 .news li a{
-	white-space: nowrap; 
+	overflow: hidden;
 	text-overflow: ellipsis;
 	line-height:20px;
 	FONT: 14px Verdana, Arial, Helvetica, sans-serif;

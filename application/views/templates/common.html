@@ -31,12 +31,26 @@
 		</div>
 	</div>
 	<div class="main-right">
+		{if $common_type=="data"}
 		<div class="content-title">
 				<a class="sub-title">{$main_data->title}</a>
-			</div>
+		</div>
 			<div class="content-p">
 			{$main_data->content}
 			</div>
+		{elseif $common_type=="list"}
+		<div class="content-title">
+				<a class="sub-title">{$title}</a>
+		</div>
+			<div class="content-p">
+			{include file="list.html"}
+			</div>
+		
+		
+		{/if}
+		
+		
+		
 	</div>
 
 

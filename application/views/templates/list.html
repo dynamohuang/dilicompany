@@ -1,0 +1,9 @@
+<link href="{$base_url}/css/list.css" rel="stylesheet" type="text/css">
+<div class="list">
+<ul>
+	{foreach $lists as $list}
+	<li><span class="new_titile"><a href="{$site_url}/welcome/news_detail/{$list->id}">{$list->title}</a></span><span class="make_date">[{$list->update_time}]</span></li>
+	{/foreach}
+	
+</ul>
+</div>
